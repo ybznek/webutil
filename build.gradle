@@ -45,7 +45,7 @@ dependencies {
 
     // jackson
     api("com.fasterxml.jackson.core:jackson-core:2.13.0")
-    api("com.fasterxml.jackson.core:jackson-databind:2.13.0")
+    api("com.fasterxml.jackson.core:jackson-databind:2.14.1")
 
     // jsoup
     api("org.jsoup:jsoup:1.14.3")
