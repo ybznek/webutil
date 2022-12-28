@@ -2,7 +2,7 @@ group 'com.ybznek'
 version '1.0.0'
 
 buildscript {
-    ext.kotlin_version = '1.7.21'
+    ext.kotlin_version = '1.8.0'
     ext.selenium_version = '4.1.0'
 
     repositories {
