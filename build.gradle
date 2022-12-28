@@ -3,7 +3,7 @@ version '1.0.0'
 
 buildscript {
     ext.kotlin_version = '1.7.21'
-    ext.selenium_version = '4.1.0'
+    ext.selenium_version = '4.7.2'
 
     repositories {
         mavenCentral()
