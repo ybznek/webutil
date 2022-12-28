@@ -2,7 +2,7 @@ group 'com.ybznek'
 version '1.0.0'
 
 buildscript {
-    ext.kotlin_version = '1.6.0'
+    ext.kotlin_version = '1.7.21'
     ext.selenium_version = '4.1.0'
 
     repositories {
@@ -54,4 +54,8 @@ dependencies {
     api("org.seleniumhq.selenium:selenium-java:$selenium_version")
     api("org.seleniumhq.selenium:selenium-chrome-driver:$selenium_version")
     api("org.seleniumhq.selenium:selenium-support:$selenium_version")
+
+    // JSON path
+    api("com.jayway.jsonpath:json-path:2.7.0")
+
 }

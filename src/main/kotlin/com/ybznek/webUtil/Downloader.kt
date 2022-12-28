@@ -1,20 +1,18 @@
 package com.ybznek.webUtil
 
-import org.jsoup.Jsoup
 import org.jsoup.helper.HttpConnection
 import java.io.File
-import java.net.URI
 
 object Downloader {
-    fun <T> downloadIfMissing(f: File, write: (File) -> T): T? {
+    fun <T> downloadIfMissing(f: File, downloadFileAndReturnContent: (File) -> T): T? {
         if (!f.exists()) {
-            write(f)
+            downloadFileAndReturnContent(f)
         }
         return null
     }
 
-    fun <T> downloadIfMissing(f: File, write: (File) -> T, read: (File) -> T): T {
-        return downloadIfMissing(f, write) ?: read(f)
+    fun <T> downloadIfMissing(cacheFile: File, downloadFileAndReturnContent: (File) -> T, read: (File) -> T): T {
+        return downloadIfMissing(cacheFile, downloadFileAndReturnContent) ?: read(cacheFile)
     }
 
     fun downloadAsText(url: String): String {

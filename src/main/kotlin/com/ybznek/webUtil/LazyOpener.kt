@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver
 import java.io.Closeable
 
 
-class LazyOpener<T : WebDriver>(private val driverProvider: () -> T) : Closeable {
+class LazyOpener<T : WebDriver>(driverProvider: () -> T) : Closeable {
     private var lazyDriver = lazy(driverProvider)
 
     val driver: T
