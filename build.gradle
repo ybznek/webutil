@@ -48,7 +48,7 @@ dependencies {
     api("com.fasterxml.jackson.core:jackson-databind:2.13.0")
 
     // jsoup
-    api("org.jsoup:jsoup:1.14.3")
+    api("org.jsoup:jsoup:1.15.3")
 
     // selenium
     api("org.seleniumhq.selenium:selenium-java:$selenium_version")
