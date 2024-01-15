@@ -1,8 +1,9 @@
 package com.ybznek.webUtil.factory
 
-import java.time.Duration
+import kotlin.time.Duration
+import kotlin.time.Duration.Companion.seconds
 
 open class FactoryConfig(
     val headless: Boolean = false,
-    val duration: Duration = Duration.ofSeconds(10)
+    val duration: Duration = 10.seconds
 )
