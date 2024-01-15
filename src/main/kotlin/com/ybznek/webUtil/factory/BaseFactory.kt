@@ -1,5 +1,6 @@
 package com.ybznek.webUtil.factory
 
+import io.github.bonigarcia.wdm.WebDriverManager
 import org.openqa.selenium.WebDriver
 
 abstract class BaseFactory<TConfig : FactoryConfig, TOpt : Any, TDriver : WebDriver> {

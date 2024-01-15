@@ -1,17 +1,14 @@
 package com.ybznek.webUtil.factory
 
+import io.github.bonigarcia.wdm.WebDriverManager
 import org.openqa.selenium.chrome.ChromeDriver
 import org.openqa.selenium.chrome.ChromeOptions
 
 internal object ChromiumDriverSubFactory : BaseFactory<ChromeFactoryConfig, ChromeOptions, ChromeDriver>() {
 
     private val defaultChromePath by lazy { findExecutable(DriverType.Chromium.driverName) }
-
     override fun createStandardDriver(config: ChromeFactoryConfig): ChromeDriver {
-        if (defaultChromePath != null) {
-            System.setProperty(DriverType.Chromium.driverName, DriverType.Chromium.defaultPath);
-        }
-
+        WebDriverManager.chromedriver().setup()
         val chromeOptions = ChromeOptions()
         initOptions(chromeOptions, config)
         return ChromeDriver(chromeOptions)
